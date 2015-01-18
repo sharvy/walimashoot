@@ -1,0 +1,14 @@
+<%= simple_form_for(@pin) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.file_field :image %>
+    <%= f.hidden_field :image_cache %>
+    <%= f.input :board_id %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
