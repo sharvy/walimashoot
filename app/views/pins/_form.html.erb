@@ -5,7 +5,7 @@
     <%= f.input :name %>
     <%= f.file_field :image %>
     <%= f.hidden_field :image_cache %>
-    <%= f.input :board_id %>
+    <%= f.input :board_id, collection: @boards, prompt: 'Please select' %>
   </div>
 
   <div class="form-actions">

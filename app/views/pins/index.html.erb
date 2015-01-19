@@ -11,10 +11,33 @@
       <th colspan="3"></th>
     </tr>
     </thead>
-    <tbody class="page">
+    <tbody id="wookmark_id" class="page">
     <%= render @pins %>
     </tbody>
   </table>
   <%= link_to 'New Pin', new_pin_path %>
   <%= paginate @pins %>
 </div>
+
+<script>
+    var $handlerr = $('#wookmark_id td');
+    $handlerr.wookmark({
+        align: 'center',
+        autoResize: true,
+        container: $('#main'),
+        offset: 5,
+        outerOffset: 10,
+        resizeDelay: 50,
+        itemWidth: 210
+    });
+
+    $handler.click(function () {
+        var newHeight = $('img', this).height() + Math.round(Math.random() * 300 + 30);
+        $(this).css('height', newHeight + 'px');
+
+        // Update the layout.
+        $handler.wookmark();
+    });
+
+
+</script>

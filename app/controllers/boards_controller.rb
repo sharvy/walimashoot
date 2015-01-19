@@ -38,7 +38,7 @@ class BoardsController < ApplicationController
 
   private
     def set_board
-      @board = Board.find(params[:id])
+      @board = Board.friendly.find(params[:id])
     end
 
     def board_params

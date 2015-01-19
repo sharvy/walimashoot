@@ -14,6 +14,7 @@ class PinsController < ApplicationController
 
   def new
     @pin = Pin.new
+    @boards = Board.all
     respond_with(@pin)
   end
 
@@ -21,7 +22,8 @@ class PinsController < ApplicationController
   end
 
   def create
-    @pin = Pin.new(pin_params)
+    @board = Board.find(pin_params[:board_id])
+    @pin = @board.pins.build(pin_params)
     @pin.save
     respond_with(@pin)
   end
