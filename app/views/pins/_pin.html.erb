@@ -1,14 +1,15 @@
 <tr class="pin">
   <td>
-    <%=link_to(image_tag(pin.image.thumb.url), pin) %>
-    <p>
-      <strong>Board:</strong>
-      <%= pin.board.title %><br/>
-      <%= pin.board.user.email %>
-    </p>
-    <p>
-      <%= link_to 'Edit', edit_pin_path(pin) %> |
-      <%= link_to 'Destroy', pin, method: :delete, data: {confirm: 'Are you sure?'} %>
-    </p>
+    <div class="thumbnail">
+      <%=link_to(image_tag(pin.image.normal.url, class: 'img-responsive'), pin) %>
+      <div class="caption">
+        <h4><%= pin.name %></h4>
+        <h5><%= pin.board.title %></h5>
+        <h6 class="label label-default">
+          <%= link_to 'Edit', edit_pin_path(pin) %> |
+          <%= link_to 'Destroy', pin, method: :delete, data: {confirm: 'Are you sure?'} %>
+        </h6>
+      </div>
+    </div>
   </td>
 </tr>

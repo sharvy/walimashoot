@@ -1,0 +1,19 @@
+.table > thead > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > th,
+.table > tbody > tr > td,
+.table > tfoot > tr > th,
+.table > tfoot > tr > td {
+  border: 0;
+}
+
+.thumbnail {
+  max-width: 210px;
+  margin-bottom: 0px;
+  .label.label-default {
+    background: #f7f7f7;
+    a {
+      color: #797979;
+    }
+  }
+}

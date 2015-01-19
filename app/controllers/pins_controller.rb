@@ -25,7 +25,7 @@ class PinsController < ApplicationController
     @board = Board.find(pin_params[:board_id])
     @pin = @board.pins.build(pin_params)
     @pin.save
-    respond_with(@pin)
+    redirect_to pins_path
   end
 
   def update

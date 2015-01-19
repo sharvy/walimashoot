@@ -4,6 +4,6 @@ class Pin < ActiveRecord::Base
   belongs_to :board
   extend FriendlyId
   friendly_id :name, use: :slugged
-  paginates_per 4
+  paginates_per 20
 
 end
