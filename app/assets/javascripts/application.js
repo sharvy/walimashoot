@@ -12,8 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require bootstrap-sprockets
 //= require jquery.infinitescroll
 //= require jquery.wookmark
+//= require trigger_wookmark
 //= require_tree .

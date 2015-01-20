@@ -38,6 +38,11 @@ class PinsController < ApplicationController
     respond_with(@pin)
   end
 
+  def pin_post
+    @current_pin = set_pin
+    @pin = @current_pin.repin_post(params[:board_id])
+  end
+
   private
     def set_pin
       @pin = Pin.friendly.find(params[:id])
