@@ -4,6 +4,7 @@ class PinsController < ApplicationController
   respond_to :html
 
   def index
+    @boards = Board.all
     @pins = Pin.order(:created_at).page(params[:page])
     respond_with(@pins)
   end
@@ -41,6 +42,7 @@ class PinsController < ApplicationController
   def pin_post
     @current_pin = set_pin
     @pin = @current_pin.repin_post(params[:board_id])
+    redirect_to pins_path
   end
 
   private

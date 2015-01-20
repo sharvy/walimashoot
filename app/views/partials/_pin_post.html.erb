@@ -1,0 +1,14 @@
+<%= form_tag(pin_post_path(pin)) do %>
+    <h4>Select a board</h4>
+    <% if boards %>
+        <% boards.each do |b| %>
+            <%= radio_button_tag :board_id, b.id %>
+            <%= b.title %> <br/>
+        <% end %>
+    <% end %>
+
+    <div>
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      <%= submit_tag 'Pinit', class: 'btn btn-primary' %>
+    </div>
+<% end %>
