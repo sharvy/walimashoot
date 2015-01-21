@@ -14,6 +14,5 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require jquery.infinitescroll
-//= require jquery.wookmark
-//= require trigger_wookmark
+//= require masonry/jquery.masonry
 //= require_tree .

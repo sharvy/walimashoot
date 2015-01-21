@@ -13,6 +13,7 @@
  *= require framework_and_override
  *= require style
  *= require vertical_navigation
+ *= require 'masonry/basic'
  *= require_tree .
  *= require_self
  */

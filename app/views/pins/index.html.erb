@@ -1,14 +1,24 @@
-<div class="col-sm-12">
+<div class="col-sm-12 no-hr-padding">
   <p id="notice"><%= notice %></p>
-  <div id="main" role="main">
-    <table id="pins" class="table">
-      <tbody id="wookmark_id" class="page">
-      <%= render @pins %>
-      </tbody>
-    </table>
 
+  <div id="pins_container" class="page">
+    <%= render @pins %>
   </div>
 
   <%= paginate @pins %>
   <%= link_to 'New Pin', new_pin_path, class: 'btn btn-default center-block' %>
 </div>
+
+<script>
+    $(function () {
+        var $pins_container = $('#pins_container');
+        // initialize
+
+        $pins_container.imagesLoaded( function() {
+            $pins_container.masonry({
+                columnWidth: 260,
+                itemSelector: '.thumbnail'
+            });
+        });
+    });
+</script>

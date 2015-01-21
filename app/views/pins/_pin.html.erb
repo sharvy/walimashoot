@@ -1,36 +1,35 @@
-<tr class="pin">
-  <td>
-    <div class="thumbnail">
-      <%= link_to(image_tag(pin.image.normal.url, class: 'img-responsive'), pin) %>
-      <div class="caption">
-        <h4><%= pin.name %></h4>
-        <h5><%= pin.board.title %></h5>
-        <h6 class="label label-default">
-          <%= link_to 'Edit', edit_pin_path(pin) %> |
-          <%= link_to 'Destroy', pin, method: :delete, data: {confirm: 'Are you sure?'} %> |
-          <%= link_to '#', data: {toggle: 'modal', target: ".share-this-modal-#{pin.id}"} do %>
-              <i class="icon-share-sign"></i>Pin This
-          <% end %>
-        </h6>
-      </div>
-    </div>
+<div class="thumbnail">
+  <%= link_to(image_tag(pin.image.normal.url, class: 'img-responsive'), pin) %>
+  <div class="caption">
+    <h4><%= pin.name %></h4>
+    <h5><%= pin.board.title %></h5>
+    <h6 class="label label-default">
+      <%= link_to 'Edit', edit_pin_path(pin) %> |
+      <%= link_to 'Destroy', pin, method: :delete, data: {confirm: 'Are you sure?'} %> |
+      <%= link_to '#', data: {toggle: 'modal', target: ".share-this-modal-#{pin.id}"} do %>
+          <i class="icon-share-sign"></i>Pin This
+      <% end %>
+    </h6>
+  </div>
 
-    <div class="modal fade share-this-modal-<%= pin.id %>" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title"><%= pin.name %></h4>
-          </div>
-          <div class="modal-body">
-            <p>
-              <%= render partial: 'partials/pin_post', locals: {boards: @boards, pin: pin} %>
-            </p>
-          </div>
+
+  <div class="modal fade share-this-modal-<%= pin.id %>" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title"><%= pin.name %></h4>
+        </div>
+        <div class="modal-body">
+          <p>
+            <%= render partial: 'partials/pin_post', locals: {boards: @boards, pin: pin} %>
+          </p>
         </div>
       </div>
     </div>
+  </div>
 
 
-  </td>
-</tr>
+</div>
+
