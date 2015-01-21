@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require jquery.infinitescroll
-//= require masonry/jquery.masonry
+//= require masonry.pkgd.min
+//= require imagesloaded.pkgd.min
 //= require_tree .

@@ -4,7 +4,7 @@ class Pin < ActiveRecord::Base
   belongs_to :board
   extend FriendlyId
   friendly_id :name, use: :slugged
-  paginates_per 20
+  paginates_per 8
 
   def repin_post(board_id)
     pin = Pin.new
