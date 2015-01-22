@@ -1,12 +1,9 @@
 <div class="col-sm-12 no-hr-padding">
   <div class="row">
     <p id="notice"><%= notice %></p>
-    <div class="col-sm-4 col-sm-offset-4">
-      <%= link_to 'New Pin', new_pin_path, class: 'btn btn-default center-block mb10' %>
-    </div>
   </div>
   <div class="row">
-    <div id="pins" class="page">
+    <div id="pins" class="page center-block">
       <%= render @pins %>
       <%= paginate @pins %>
     </div>

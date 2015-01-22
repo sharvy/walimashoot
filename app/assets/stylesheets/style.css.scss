@@ -8,13 +8,35 @@
 }
 
 .thumbnail {
+  background: #1d1d1d;
+  color: #fff;
   display: inline-block;
   width: 250px;
   margin-bottom: 10px;
+  border: 0;
+  padding: 0 0 10px;
+  img {
+    width: 100%;
+    overflow: hidden;
+  }
   .label.label-default {
-    background: #f7f7f7;
+    background: none;
+    padding: 0;
     a {
       color: #797979;
     }
+  }
+  .caption {
+    color: #fff;
+  }
+}
+
+.pin-info {
+  background: rgba(0, 0, 0, 0.9);
+  .pin-details {
+    display: block;
+    padding: 5px 100px;
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
   }
 }
