@@ -1,5 +1,5 @@
 <div class="pin thumbnail entry-content">
-  <%= link_to(image_tag(pin.image.normal.url, class: 'img-responsive'), pin) %>
+  <%= link_to(image_tag(image_url(pin), class: 'img-responsive'), pin) %>
   <div class="caption">
     <h4><%= pin.name %></h4>
     <h5><%= pin.board.title %></h5>

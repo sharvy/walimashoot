@@ -2,7 +2,7 @@
 
 <div class="pin-info text-center">
   <div>
-    <%= image_tag @pin.image.url, class: 'img-responsive center-block' %>
+    <%= image_tag image_url(@pin), class: 'img-responsive center-block' %>
   </div>
   <div class="pin-details">
     <h4><%= @pin.name %></h4>
