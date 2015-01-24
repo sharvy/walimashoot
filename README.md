@@ -1,3 +1,3 @@
-# funterest
+# Wedding-Photography
 
-A pinterest similar fun app using Rails 4.
+A Pinterest alike photography app using Rails 4.2
