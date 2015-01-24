@@ -3,7 +3,7 @@
   <div class="caption">
     <h4><%= pin.name %></h4>
     <h5><%= pin.board.title %></h5>
-    <%= if user_signed_in? %>
+    <% if user_signed_in? %>
         <h6 class="label label-default">
           <%= link_to 'Edit', edit_pin_path(pin) %> |
           <%= link_to 'Destroy', pin, method: :delete, data: {confirm: 'Are you sure?'} %> |
