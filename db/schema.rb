@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 20150123154032) do
     t.string   "slug"
   end
 
+  add_index "boards", ["slug"], name: "index_boards_on_slug", unique: true, using: :btree
+
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
     t.integer  "sluggable_id",              null: false
