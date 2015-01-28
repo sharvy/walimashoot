@@ -1,3 +1,3 @@
-# Wedding-Photography
+# WalimaShoot
 
-A Pinterest alike photography app using Rails 4.2
+A Pinterest alike wedding photographers management app using Rails 4.2
