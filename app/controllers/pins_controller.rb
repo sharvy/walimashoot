@@ -15,7 +15,6 @@ class PinsController < ApplicationController
 
   def new
     @pin = Pin.new
-    @boards = Board.all
     respond_with(@pin)
   end
 
