@@ -3,7 +3,7 @@
 
   <div class="form-inputs">
     <%= f.input :name %>
-    <%= f.file_field :image %>
+    <%= f.file_field :image %> <br/>
     <%= f.input :external_image_url, label: 'External URL' %>
     <%= f.hidden_field :image_cache %>
     <%= f.input :board_id, collection: user_boards, prompt: 'Please select' %>

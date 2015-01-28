@@ -46,14 +46,22 @@ input, select, textarea, pre, .progress, .modal, .add-on, .alert, .table-bordere
   margin-top: 100px;
 }
 
+
 input[type='text'],
 input[type='password'],
-input[type='email'] {
-  background: #505050;
+input[type='email'],
+textarea,
+select {
+  background: #2f2f2f;
   border: 0;
   color: #fff;
 }
 
-.form-control::-moz-placeholder {
-  color: #7a7a7a;
+.form-control {
+  background: #2f2f2f;
+  border: 0;
+  color: #fff;
+  &::-moz-placeholder {
+    color: #7a7a7a;
+  }
 }
