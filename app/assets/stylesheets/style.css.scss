@@ -40,3 +40,24 @@
     color: #fff;
   }
 }
+
+.sign-in-form {
+  .input-group {
+    margin-bottom: 5px;
+    font-family: OpenSans, arial, helvetica, sans-serif;
+
+    .input-group-addon {
+      border: 0;
+      background: #333;
+      color: #fff;
+    }
+  }
+}
+
+.pins-container {
+  min-height: 500px;
+}
+
+.footer {
+  margin-top: 20px;
+}
